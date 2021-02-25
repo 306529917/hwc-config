@@ -1,7 +1,10 @@
 server:
    # 随机端口
    port: 0
+zuul:
    host: 127.0.0.1
+   post: 1111
+   
 spring:
   jackson:
     date-format: yy-MM-dd HH:mm
