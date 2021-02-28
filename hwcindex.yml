@@ -16,6 +16,9 @@ spring:
          - classpath:/static/
          - classpath:/public/
          - file:/${upload-dir}
+  http:
+    multipart:
+      maxFileSize: 10Mb
     
 logging:
    level:
