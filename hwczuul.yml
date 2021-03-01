@@ -8,3 +8,9 @@ zuul:
       hwcbook: task/**
       hwcuser: user/**
       hwcindex: /**
+
+spring:
+  servlet:
+    multipart:
+      maxFileSize: 10Mb
+      maxRequestSize: 10Mb
