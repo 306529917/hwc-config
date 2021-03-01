@@ -18,8 +18,8 @@ spring:
          - file:/${upload-dir}
   servlet:
     multipart:
-      maxFileSize: 10Mb
-      maxRequestSize: 10Mb
+      maxFileSize: 10MB
+      maxRequestSize: 10MB
     
 logging:
    level:
