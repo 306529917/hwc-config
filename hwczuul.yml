@@ -14,3 +14,9 @@ spring:
     multipart:
       maxFileSize: 10MB
       maxRequestSize: 10MB
+      
+spring:
+  profiles: yc
+
+server:
+  port: 2222
