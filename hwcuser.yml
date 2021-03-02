@@ -21,3 +21,15 @@ logging:
 #      root: debug
       com:
          yc: debug
+         
+---
+spring:
+  profiles: yc
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    username: demo
+    password: a
+logging:
+  level:
+    com:
+      yc: info

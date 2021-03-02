@@ -1,21 +1,18 @@
 server:
    # 随机端口
    port: 0
-zuul:
-   host: 127.0.0.1
-   post: 1111
-   
+
 spring:
   jackson:
     date-format: yy-MM-dd HH:mm
     time-zone: GMT+8
   resources:
-      staticLocations:
-         - classpath:/META-INF/resources/
-         - classpath:/resources/
-         - classpath:/static/
-         - classpath:/public/
-         - file:/${upload-dir}
+    static-locations:
+      - file:${upload-dir}
+      - classpath:/META-INF/resources/
+      - classpath:/resources/
+      - classpath:/static/
+      - classpath:/public/
   servlet:
     multipart:
       maxFileSize: 10MB
@@ -27,4 +24,25 @@ logging:
       com:
          yc: debug
          
+zuul:
+   host: 127.0.0.1
+   post: 1111
 upload-dir: d:/hwc_upload/
+
+
+---
+spring:
+  profiles: yc
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    username: demo
+    password: a
+logging:
+  level:
+    com:
+      yc: info
+# 自定义参数
+zuul:
+   host: 47.106.66.89
+   post: 2222
+upload-dir: /root/work/hwc/upload
